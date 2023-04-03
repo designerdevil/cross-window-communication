@@ -8,6 +8,20 @@
 <body>
   <h1>Server B</h1>
   <p>Welcome to server B</p>
+  <iframe src="http://localhost:3001/myform" width="500" height="300">
+
+  </iframe>
+  <br/><br/>
+  <div id="status"></div>
+  <script type="text/javascript">
+    window.onmessage = function(e) {
+      if(e.origin = 'http://localhost:3001') {
+        if (e.data == 'iframeloaded') {
+            document.getElementById('status').innerHTML = '=== Super! got this message from iframe content ==='
+        }
+      }
+    };
+  </script>
 </body>
 
 </html>
