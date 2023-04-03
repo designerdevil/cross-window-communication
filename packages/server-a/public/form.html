@@ -1,12 +1,13 @@
 <html>
 
 <head>
-  <title>Server A</title>
+  <title>Server A - Form</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
-  <form action="/formpost" method="post">
+  <h1>Server A Form</h1>
+  <form method="post">
     <fieldset>
 
       <!-- Form Name -->
@@ -20,9 +21,12 @@
         <span class="help-block">Please enter email id</span>  
         </div>
       </div>
-      
+      <button type="submit">Submit</button>
       </fieldset>
   </form>
+  <script type="text/javascript">
+    window.top.postMessage('iframeloaded', 'http://localhost:3002')
+  </script>
 </body>
 
 </html>
