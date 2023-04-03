@@ -17,7 +17,11 @@
     window.onmessage = function(e) {
       if(e.origin = 'http://localhost:3001') {
         if (e.data == 'iframeloaded') {
-            document.getElementById('status').innerHTML = '=== Super! got this message from iframe content ==='
+          document.getElementById('status').innerHTML = '=== Super! got this message from iframe content ==='
+        } else if (e.data == 'formposted') {
+          document.getElementById('status').innerHTML = '=== Iframe content says your form is posted ==='
+        } else {
+          document.getElementById('status').innerHTML = ' !! NO MESSAGE FROM CONTENT !! '
         }
       }
     };
