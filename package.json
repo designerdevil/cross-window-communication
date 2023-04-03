@@ -1,0 +1,31 @@
+{
+  "name": "cross-window-communication",
+  "version": "1.0.0",
+  "description": "Cross window communication",
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "lerna exec npm install",
+    "build": "lerna run build",
+    "start": "lerna run start --stream",
+    "start:single": "lerna run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "TODO"
+  },
+  "keywords": [
+    "separation of concern",
+    "view layer",
+    "logic layer"
+  ],
+  "author": "Gaurav Mall",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^6.6.1",
+    "nodemon": "^2.0.22"
+  }
+}
